@@ -8,7 +8,7 @@ number_list = [
 	416, 417, 418, 421, 422, 423, 424, 425, 426,
 	429, 431, 444, 450, 451, 500, 502, 503, 504, 506, 507, 508, 509, 510, 511, 599
 ]
-
+ 
 @web_site.route('/')
 def index():
 	return render_template('index.html')
