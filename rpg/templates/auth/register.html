@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Registrar-se no RPG</title>
+    </head>
+    <body>
+        <form action="/auth/register" method="POST">
+            <label for="username">Nome de Usuário: </label>
+            <input id="username" type="text" name="username">
+            <label for="password">Senha: </label>
+            <input id="password" type="password" name="password">
+            <button type="submit">Ok</button>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class=flashes>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </form>
+    </body>
+</html>
