@@ -43,7 +43,7 @@ def init_app(app):
 def select_user(username):
     db = get_db()
     return db.execute(
-        'SELECT id, username FROM user WHERE username = ?', (username,)
+        'SELECT id, username, password FROM user WHERE username = ?', (username,)
         ).fetchone()
     
 
